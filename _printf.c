@@ -38,7 +38,6 @@ int _printf(const char *format, ...)
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer
 			printed = handle_print(format, &i, list, buffer,
 flags, width, precision, size);
 					if (printed == -1)
@@ -58,10 +57,10 @@ flags, width, precision, size);
 					 * @buffer: array of char
 					 * @buff_ind: index at next char
 					 */
-void print_buffer(char buffer[], int *buff_ind);
+void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
 		write(1, &buffer[0], *buff_ind);
 
-	*buf_ind = 0;
+	*buff_ind = 0;
 }
